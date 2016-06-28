@@ -23,5 +23,15 @@ describe('String#number_to_word') do
     expect("343".number_to_word()).to(eq('three hundred forty three'))
   end
 
+  it('correctly formats six digit number (given 654211 should return six hundred fifty four thousand two hundred eleven)') do
+    expect("654211".number_to_word()).to(eq('six hundred fifty four thousand two hundred eleven'))
+  end
+
+  it('correctly formats nine digit number (given 654343345 should return six hundred fifty four million three hundred forty three thousand three hundred forty five)') do
+    expect("654343345".number_to_word()).to(eq('six hundred fifty four million three hundred forty three thousand three hundred forty five'))
+  end
+
+
+
 
 end
